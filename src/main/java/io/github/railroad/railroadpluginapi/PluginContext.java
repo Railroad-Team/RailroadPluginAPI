@@ -1,6 +1,7 @@
 package io.github.railroad.railroadpluginapi;
 
 import io.github.railroad.railroadpluginapi.event.EventBus;
+import io.github.railroad.railroadpluginapi.log.Logger;
 
 import java.nio.file.Path;
 
