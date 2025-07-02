@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group = 'io.github.railroad'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
