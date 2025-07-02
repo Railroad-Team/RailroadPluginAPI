@@ -22,7 +22,7 @@ repositories {
 }
 
 dependencies {
-
+    implementation 'com.github.Railroad-Team:RailroadLogger:v1.0.0'
 }
 
 publishing {
