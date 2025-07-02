@@ -4,6 +4,7 @@ import io.github.railroad.logger.Logger;
 import io.github.railroad.railroadpluginapi.event.EventBus;
 
 import java.nio.file.Path;
+import java.util.List;
 
 /*
  * Railroad Plugin API
@@ -49,6 +50,17 @@ public interface PluginContext {
     <T> void registerExtension(Class<T> extensionPoint, T extension);
 
     /**
+     * Retrieves all registered extensions for the specified extension point.
+     * This method returns a list of all extensions that have been registered
+     * for the given extension point class.
+     *
+     * @param <T>            the type of the extension
+     * @param extensionPoint the class representing the extension point
+     * @return a list of registered extensions for the specified extension point
+     */
+    <T> List<T> getExtensions(Class<T> extensionPoint);
+
+    /**
      * Returns the directory where the plugin's data is stored.
      * This directory is typically used for storing configuration files, logs, and other
      * persistent data related to the plugin.
@@ -56,4 +68,15 @@ public interface PluginContext {
      * @return the data directory path
      */
     Path getDataDirectory();
+
+    /**
+     * Retrieves a service of the specified class from the plugin context.
+     * This method allows plugins to access shared services provided by the core system
+     * or other plugins.
+     *
+     * @param <T>          the type of the service
+     * @param serviceClass the class representing the service
+     * @return an instance of the requested service, or null if not found
+     */
+    <T> T getService(Class<T> serviceClass);
 }
