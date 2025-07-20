@@ -1,6 +1,6 @@
 package io.github.railroad.railroadpluginapi;
 
-import java.util.Map;
+import io.github.railroad.railroadpluginapi.deps.MavenDeps;
 
 /**
  * Represents the metadata of a plugin.
@@ -71,10 +71,9 @@ public interface PluginDescriptor {
     String getMainClass();
 
     /**
-     * Returns a map of dependencies required by the plugin.
-     * The keys are the dependency names and the values are the versions.
+     * Returns the dependencies required by the plugin.
      *
-     * @return a map of dependencies
+     * @return the plugin dependencies
      */
-    Map<String, String> getDependencies();
+    MavenDeps getDependencies();
 }

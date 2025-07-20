@@ -1,5 +1,6 @@
 package io.github.railroad.railroadpluginapi;
 
+import io.github.railroad.core.registry.Registry;
 import io.github.railroad.logger.Logger;
 import io.github.railroad.railroadpluginapi.event.EventBus;
 
@@ -38,6 +39,15 @@ public interface PluginContext {
      * @return the logger
      */
     Logger getLogger();
+
+    /**
+     * Sets the logger for the plugin.
+     * This method allows the plugin to specify its own logger, which can be used
+     * for logging messages, warnings, and errors.
+     *
+     * @param logger the logger to set
+     */
+    void setLogger(Logger logger);
 
     /**
      * Registers an extension for the specified extension point.
@@ -79,4 +89,25 @@ public interface PluginContext {
      * @return an instance of the requested service, or null if not found
      */
     <T> T getService(Class<T> serviceClass);
+
+    /**
+     * Retrieves a registry for the specified type.
+     * Registries are used to manage collections of objects of a specific type,
+     * allowing for efficient access and manipulation.
+     *
+     * @param <T>  the type of objects in the registry
+     * @param type the class representing the type of objects in the registry
+     * @return a registry for the specified type
+     */
+    <T> Registry<T> getRegistry(Class<T> type);
+
+    /**
+     * Retrieves a registry by its id.
+     * This method allows plugins to access registries that are not type-specific,
+     * using a string identifier.
+     *
+     * @param id the id of the registry
+     * @return a registry associated with the specified id, or null if not found
+     */
+    Registry<?> getRegistry(String id);
 }

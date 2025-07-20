@@ -4,31 +4,21 @@ package io.github.railroad.railroadpluginapi;
  * Railroad Plugin API
  * <p>
  * This interface defines the basic structure of a plugin in the Railroad system.
- * Plugins can be initialized, started, and stopped, allowing for dynamic behavior
+ * Plugins can be enabled and disabled, allowing for dynamic behavior
  * within the Railroad application.
  */
 public interface Plugin {
     /**
-     * Initializes the plugin with the provided context.
-     * The context provides access to the plugin's descriptor, event bus, logger,
-     * and methods for registering extensions.
+     * Enables the plugin, initializing resources and starting any necessary processes.
      *
-     * @param context the plugin context
+     * @param context The context in which the plugin operates, providing access to services and resources.
      */
-    void initialize(PluginContext context);
+    void onEnable(PluginContext context);
 
     /**
-     * Starts the plugin.
-     * This method is called after the plugin has been initialized and is ready to
-     * perform its operations.
+     * Disables the plugin, cleaning up resources and stopping any ongoing processes.
+     *
+     * @param context The context in which the plugin operates, providing access to services and resources.
      */
-    void start();
-
-    /**
-     * Stops the plugin.
-     * This method is called when the plugin is no longer needed or when the application
-     * is shutting down. It allows the plugin to clean up resources and perform any
-     * necessary shutdown operations.
-     */
-    void stop();
+    void onDisable(PluginContext context);
 }
