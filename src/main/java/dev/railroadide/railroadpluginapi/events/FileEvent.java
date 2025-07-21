@@ -1,7 +1,7 @@
-package io.github.railroad.railroadpluginapi.events;
+package dev.railroadide.railroadpluginapi.events;
 
-import io.github.railroad.railroadpluginapi.dto.Document;
-import io.github.railroad.railroadpluginapi.event.Event;
+import dev.railroadide.railroadpluginapi.dto.Document;
+import dev.railroadide.railroadpluginapi.event.Event;
 
 /**
  * Represents an event related to file operations within the Railroad IDE.

@@ -1,4 +1,4 @@
-package io.github.railroad.railroadpluginapi.dto;
+package dev.railroadide.railroadpluginapi.dto;
 
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;

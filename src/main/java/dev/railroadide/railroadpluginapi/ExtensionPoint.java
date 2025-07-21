@@ -1,4 +1,4 @@
-package io.github.railroad.railroadpluginapi;
+package dev.railroadide.railroadpluginapi;
 
 /**
  * ExtensionPoint is a marker interface used to define extension points in the Railroad Plugin API.

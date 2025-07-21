@@ -1,4 +1,4 @@
-package io.github.railroad.railroadpluginapi.event;
+package dev.railroadide.railroadpluginapi.event;
 
 /**
  * An interface for an event bus that allows publishing events and subscribing to them.

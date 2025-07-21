@@ -1,4 +1,4 @@
-package io.github.railroad.railroadpluginapi.deps;
+package dev.railroadide.railroadpluginapi.deps;
 
 /**
  * Represents a Maven repository.

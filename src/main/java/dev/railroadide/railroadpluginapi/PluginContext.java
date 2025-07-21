@@ -1,8 +1,8 @@
-package io.github.railroad.railroadpluginapi;
+package dev.railroadide.railroadpluginapi;
 
-import io.github.railroad.core.registry.Registry;
-import io.github.railroad.logger.Logger;
-import io.github.railroad.railroadpluginapi.event.EventBus;
+import dev.railroadide.core.registry.Registry;
+import dev.railroadide.logger.Logger;
+import dev.railroadide.railroadpluginapi.event.EventBus;
 
 import java.nio.file.Path;
 import java.util.List;

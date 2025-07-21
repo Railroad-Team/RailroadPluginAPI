@@ -1,7 +1,7 @@
-package io.github.railroad.railroadpluginapi.services;
+package dev.railroadide.railroadpluginapi.services;
 
-import io.github.railroad.core.settings.Setting;
-import io.github.railroad.core.settings.SettingCodec;
+import dev.railroadide.core.settings.Setting;
+import dev.railroadide.core.settings.SettingCodec;
 
 /**
  * Service interface for managing and accessing application settings.

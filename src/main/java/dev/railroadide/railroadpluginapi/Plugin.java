@@ -1,4 +1,4 @@
-package io.github.railroad.railroadpluginapi;
+package dev.railroadide.railroadpluginapi;
 
 /**
  * Railroad Plugin API

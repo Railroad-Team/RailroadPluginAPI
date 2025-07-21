@@ -1,4 +1,4 @@
-package io.github.railroad.railroadpluginapi.deps;
+package dev.railroadide.railroadpluginapi.deps;
 
 /**
  * Represents a Maven dependency with its group ID, artifact ID, and version.

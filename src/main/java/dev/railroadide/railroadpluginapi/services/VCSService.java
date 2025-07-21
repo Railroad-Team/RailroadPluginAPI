@@ -1,7 +1,7 @@
-package io.github.railroad.railroadpluginapi.services;
+package dev.railroadide.railroadpluginapi.services;
 
-import io.github.railroad.core.vcs.Repository;
-import io.github.railroad.core.vcs.connections.VCSProfile;
+import dev.railroadide.core.vcs.Repository;
+import dev.railroadide.core.vcs.connections.VCSProfile;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 

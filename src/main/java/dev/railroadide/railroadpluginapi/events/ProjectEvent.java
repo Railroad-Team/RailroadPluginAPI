@@ -1,7 +1,7 @@
-package io.github.railroad.railroadpluginapi.events;
+package dev.railroadide.railroadpluginapi.events;
 
-import io.github.railroad.railroadpluginapi.dto.Project;
-import io.github.railroad.railroadpluginapi.event.Event;
+import dev.railroadide.railroadpluginapi.dto.Project;
+import dev.railroadide.railroadpluginapi.event.Event;
 
 /**
  * Represents an event related to a project, such as when a project is opened or closed.

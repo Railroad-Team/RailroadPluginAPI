@@ -1,6 +1,6 @@
-package io.github.railroad.railroadpluginapi;
+package dev.railroadide.railroadpluginapi;
 
-import io.github.railroad.railroadpluginapi.deps.MavenDeps;
+import dev.railroadide.railroadpluginapi.deps.MavenDeps;
 
 /**
  * Represents the metadata of a plugin.

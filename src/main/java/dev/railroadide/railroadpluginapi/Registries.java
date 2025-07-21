@@ -1,7 +1,7 @@
-package io.github.railroad.railroadpluginapi;
+package dev.railroadide.railroadpluginapi;
 
-import io.github.railroad.core.registry.Registry;
-import io.github.railroad.core.settings.Setting;
+import dev.railroadide.core.registry.Registry;
+import dev.railroadide.core.settings.Setting;
 
 /**
  * Utility class to access various registries in the Railroad plugin API.

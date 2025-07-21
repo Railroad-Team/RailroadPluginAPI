@@ -1,6 +1,6 @@
-package io.github.railroad.railroadpluginapi.events;
+package dev.railroadide.railroadpluginapi.events;
 
-import io.github.railroad.railroadpluginapi.event.Event;
+import dev.railroadide.railroadpluginapi.event.Event;
 
 /**
  * This event is triggered when the application enters the default state.

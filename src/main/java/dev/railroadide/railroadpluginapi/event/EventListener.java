@@ -1,4 +1,4 @@
-package io.github.railroad.railroadpluginapi.event;
+package dev.railroadide.railroadpluginapi.event;
 
 /**
  * An interface for event listeners that handle events of type T.

@@ -4,8 +4,8 @@ plugins {
     id 'org.openjfx.javafxplugin' version '0.1.0'
 }
 
-group = 'io.github.railroad'
-version = '1.0-SNAPSHOT'
+group = 'dev.railroadide'
+version = '1.0.0'
 
 java {
     toolchain {
@@ -20,7 +20,7 @@ tasks.withType(JavaCompile).configureEach {
 repositories {
     mavenLocal()
     mavenCentral()
-    maven { url 'https://jitpack.io' }
+    maven { url "https://maven.railroadide.dev/releases" }
 }
 
 javafx {
@@ -29,8 +29,8 @@ javafx {
 }
 
 dependencies {
-    api 'io.github.railroad:RailroadLogger:1.0-SNAPSHOT'
-    api 'io.github.railroad:RailroadCore:1.0-SNAPSHOT'
+    api "dev.railroadide:RailroadLogger:1.0.0"
+    api 'dev.railroadide:RailroadCore:1.0.0'
 
     api 'org.openjfx:javafx-controls:21.0.2'
     api 'org.openjfx:javafx-graphics:21.0.2'
@@ -44,6 +44,13 @@ tasks.register('sourcesJar', Jar) {
 publishing {
     repositories {
         mavenLocal()
+        maven {
+            url "https://maven.railroadide.dev/releases"
+            credentials {
+                username = System.getenv("RAILROAD_MAVEN_USERNAME")
+                password = System.getenv("RAILROAD_MAVEN_PASSWORD")
+            }
+        }
     }
     publications {
         mavenJava(MavenPublication) {

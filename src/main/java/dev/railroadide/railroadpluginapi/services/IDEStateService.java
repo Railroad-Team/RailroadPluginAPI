@@ -1,7 +1,7 @@
-package io.github.railroad.railroadpluginapi.services;
+package dev.railroadide.railroadpluginapi.services;
 
-import io.github.railroad.railroadpluginapi.dto.Document;
-import io.github.railroad.railroadpluginapi.dto.Project;
+import dev.railroadide.railroadpluginapi.dto.Document;
+import dev.railroadide.railroadpluginapi.dto.Project;
 
 import java.util.List;
 

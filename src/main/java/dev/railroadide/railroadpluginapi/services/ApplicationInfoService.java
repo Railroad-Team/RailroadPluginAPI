@@ -1,4 +1,4 @@
-package io.github.railroad.railroadpluginapi.services;
+package dev.railroadide.railroadpluginapi.services;
 
 /**
  * Service to provide application information such as version, name, and build timestamp.
