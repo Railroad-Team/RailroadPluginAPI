@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'dev.railroadide'
-version = '1.0.1'
+version = '1.0.2'
 
 java {
     toolchain {
@@ -29,7 +29,7 @@ javafx {
 }
 
 dependencies {
-    api "dev.railroadide:RailroadLogger:1.0.1"
+    api "dev.railroadide:RailroadLogger:1.0.2"
     api 'dev.railroadide:RailroadCore:1.0.1'
 
     api 'org.openjfx:javafx-controls:21.0.2'
