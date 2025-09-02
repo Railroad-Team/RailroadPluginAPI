@@ -6,7 +6,7 @@ import dev.railroadide.railroadpluginapi.event.Event;
 /**
  * Represents an event related to file operations within the Railroad IDE.
  * This event is used to notify subscribers about various file-related actions such as opening, closing,
- * saving, modifying, deleting, renaming, activating, and deactivating files.
+ * saving, deleting, activating, and deactivating files.
  */
 public record FileEvent(Document file, FileEvent.EventType eventType) implements Event {
     /**
@@ -22,7 +22,6 @@ public record FileEvent(Document file, FileEvent.EventType eventType) implements
 
         if (eventType == null)
             throw new IllegalArgumentException("eventType cannot be null");
-
     }
 
     /**
@@ -30,7 +29,7 @@ public record FileEvent(Document file, FileEvent.EventType eventType) implements
      *
      * @return true if the event type is OPENED, false otherwise.
      */
-    public boolean isOpened() {
+    public boolean isOpenedEvent() {
         return eventType == EventType.OPENED;
     }
 
@@ -39,7 +38,7 @@ public record FileEvent(Document file, FileEvent.EventType eventType) implements
      *
      * @return true if the event type is CLOSED, false otherwise.
      */
-    public boolean isClosed() {
+    public boolean isClosedEvent() {
         return eventType == EventType.CLOSED;
     }
 
@@ -48,7 +47,7 @@ public record FileEvent(Document file, FileEvent.EventType eventType) implements
      *
      * @return true if the event type is SAVED, false otherwise.
      */
-    public boolean isSaved() {
+    public boolean isSavedEvent() {
         return eventType == EventType.SAVED;
     }
 
@@ -57,7 +56,7 @@ public record FileEvent(Document file, FileEvent.EventType eventType) implements
      *
      * @return true if the event type is DELETED, false otherwise.
      */
-    public boolean isDeleted() {
+    public boolean isDeletedEvent() {
         return eventType == EventType.DELETED;
     }
 
@@ -66,7 +65,7 @@ public record FileEvent(Document file, FileEvent.EventType eventType) implements
      *
      * @return true if the event type is ACTIVATED, false otherwise.
      */
-    public boolean isActivated() {
+    public boolean isActivatedEvent() {
         return eventType == EventType.ACTIVATED;
     }
 
@@ -75,7 +74,7 @@ public record FileEvent(Document file, FileEvent.EventType eventType) implements
      *
      * @return true if the event type is DEACTIVATED, false otherwise.
      */
-    public boolean isDeactivated() {
+    public boolean isDeactivatedEvent() {
         return eventType == EventType.DEACTIVATED;
     }
 

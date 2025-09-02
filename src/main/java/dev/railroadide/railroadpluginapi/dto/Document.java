@@ -37,4 +37,25 @@ public interface Document {
     default String getContentAsString() {
         return new String(getContent(), StandardCharsets.UTF_8);
     }
+
+    /**
+     * Gets the number of lines in the document.
+     *
+     * @return the number of lines in the document
+     */
+    long getLineCount();
+
+    /**
+     * Gets the language ID of the document.
+     *
+     * @return the language ID of the document
+     */
+    String getLanguageId();
+
+    /**
+     * Checks if the document has unsaved changes.
+     *
+     * @return true if the document is dirty, false otherwise
+     */
+    boolean isDirty();
 }
