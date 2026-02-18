@@ -1,0 +1,38 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'groovy'
+    id 'maven-publish'
+}
+
+group = 'dev.railroadide'
+version = '0.3.0'
+
+gradlePlugin {
+    plugins {
+        railroadpluginapi {
+            id = 'dev.railroadide.railroadpluginapi'
+            implementationClass = 'dev.railroadide.railroadpluginapi.RailroadPluginAPIPlugin'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation localGroovy()
+}
+
+publishing {
+    repositories {
+        mavenLocal()
+        maven {
+            url = uri("https://maven.railroadide.dev/releases")
+            credentials {
+                username = System.getenv("RAILROAD_MAVEN_USERNAME")
+                password = System.getenv("RAILROAD_MAVEN_PASSWORD")
+            }
+        }
+    }
+}
