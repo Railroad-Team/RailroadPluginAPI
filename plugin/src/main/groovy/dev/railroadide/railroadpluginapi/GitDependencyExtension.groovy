@@ -4,6 +4,7 @@ import org.gradle.api.provider.Property
 
 abstract class GitDependencyExtension {
     abstract Property<String> getRepoUrl()
+    abstract Property<String> getBranch()
     abstract Property<String> getCommitHash()
     abstract Property<String> getSubdirectory()
     abstract Property<String> getJarTaskName()

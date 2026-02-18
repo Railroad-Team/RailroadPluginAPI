@@ -11,6 +11,7 @@ class RailroadPluginAPIPlugin implements Plugin<Project> {
     void apply(Project project) {
         def ext = project.extensions.create('railroadDependency', GitDependencyExtension)
         ext.repoUrl.convention("https://github.com/Railroad-Team/Railroad")
+        ext.branch.convention("")
         ext.commitHash.convention("HEAD")
         ext.subdirectory.convention("")
         ext.jarTaskName.convention("jar")
@@ -34,6 +35,7 @@ class RailroadPluginAPIPlugin implements Plugin<Project> {
 
         def fetch = project.tasks.register("fetchGitDependency", GitExecTask) { task ->
             task.repositoryUrl.set(ext.repoUrl)
+            task.branch.set(ext.branch)
             task.commitHash.set(ext.commitHash)
             task.outputDir.set(checkoutDir)
         }

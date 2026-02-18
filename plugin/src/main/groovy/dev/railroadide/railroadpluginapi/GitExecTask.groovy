@@ -14,6 +14,8 @@ abstract class GitExecTask extends DefaultTask {
     @Input
     abstract Property<String> getRepositoryUrl()
     @Input
+    abstract Property<String> getBranch()
+    @Input
     abstract Property<String> getCommitHash()
     @OutputDirectory
     abstract DirectoryProperty getOutputDir()
@@ -32,14 +34,23 @@ abstract class GitExecTask extends DefaultTask {
             }
         }
 
-        // Fetch + checkout commit (force)
+        // Fetch + checkout target (force). If a branch is set and commitHash=HEAD,
+        // use the latest commit from origin/<branch>.
         execOperations.exec {
             workingDir dir
             commandLine "git", "fetch", "--all", "--tags", "--prune"
         }
+
+        String commit = commitHash.get().trim()
+        String configuredBranch = branch.get().trim()
+        String target = commit
+        if (configuredBranch && commit.equalsIgnoreCase("HEAD")) {
+            target = "origin/${configuredBranch}"
+        }
+
         execOperations.exec {
             workingDir dir
-            commandLine "git", "checkout", "--force", commitHash.get()
+            commandLine "git", "checkout", "--force", target
         }
     }
 }
